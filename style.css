@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #0d1117;
+    color: white;
+}
+
+/* Header */
+header{
+    background-color: #05132b;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    color: #00bfff;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #00bfff;
+}
+
+/* Hero */
+.hero{
+    height: 80vh;
+    background: linear-gradient(
+        rgba(0,0,50,0.6),
+        rgba(0,0,50,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero h2{
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #00bfff;
+}
+
+.hero p{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.hero button{
+    padding: 12px 25px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover{
+    background-color: #0088cc;
+}
+
+/* Movies */
+.movies{
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.movies h2{
+    color: #00bfff;
+    font-size: 40px;
+}
+
+/* Cards */
+.movie-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.movie-card{
+    background-color: #13203a;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,191,255,0.3);
+    transition: 0.3s;
+}
+
+.movie-card:hover{
+    transform: translateY(-10px);
+}
+
+.movie-card img{
+    width: 100%;
+}
+
+.movie-card h3{
+    color: #00bfff;
+    margin: 15px 0;
+}
+
+.movie-card p{
+    padding-bottom: 15px;
+}
+
+.seat-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.seat{
+    width: 30px;
+    height: 30px;
+    background-color: #00bfff; /* kaltër */
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seat:hover{
+    background-color: #0099cc;
+    transform: scale(1.1);
+}
+
+/* Ulëset e zëna */
+.occupied{
+    background-color: #666;
+    cursor: not-allowed;
+}
