@@ -1,0 +1,365 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:url("cinema-background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
+}
+
+/* MAIN CONTAINER */
+
+.contact-card{
+
+    position:absolute;
+
+    top:22%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:58%;
+
+    display:flex;
+
+    gap:30px;
+}
+
+/* LEFT PANEL */
+
+.left-side{
+
+    width:30%;
+
+    padding-right:20px;
+
+    border-right:
+    1px solid rgba(255,255,255,.1);
+}
+
+.left-side h2{
+
+    color:#3da6ff;
+
+    font-size:1.7rem;
+
+    margin-bottom:15px;
+}
+
+.left-side p{
+
+    color:#dbe7ff;
+
+    line-height:1.5;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+}
+
+.contact-info{
+
+    margin-bottom:18px;
+}
+
+.contact-info h3{
+
+    color:white;
+
+    font-size:15px;
+
+    margin-bottom:3px;
+}
+
+.contact-info span{
+
+    color:#b8caf0;
+
+    font-size:13px;
+}
+
+/* RIGHT PANEL */
+
+.right-side{
+
+    width:70%;
+}
+
+.right-side h1{
+
+    color:white;
+
+    font-size:1.9rem;
+
+    margin-bottom:18px;
+
+    text-shadow:
+    0 0 12px rgba(255,255,255,.15);
+}
+
+form{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.row{
+
+    display:flex;
+    gap:10px;
+}
+
+.row input{
+
+    width:50%;
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:11px 14px;
+
+    border-radius:10px;
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    background:
+    rgba(0,0,0,.45);
+
+    color:white;
+
+    outline:none;
+
+    font-size:14px;
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#93abd6;
+}
+
+input:focus,
+textarea:focus{
+
+    border:
+    1px solid rgba(0,140,255,.7);
+
+    box-shadow:
+    0 0 12px rgba(0,140,255,.2);
+}
+
+textarea{
+
+    resize:none;
+
+    height:85px;
+}
+
+button{
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #0057ff,
+    #2e9fff
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 15px rgba(0,140,255,.35);
+}
+
+#successMessage{
+
+    color:#78ff9a;
+
+    text-align:center;
+
+    margin-top:5px;
+}
+
+/* LAPTOPS */
+
+@media(max-width:1400px){
+
+    .contact-card{
+
+        width:65%;
+    }
+}
+
+/* TABLETS */
+
+@media(max-width:1000px){
+
+    .contact-card{
+
+        width:85%;
+
+        flex-direction:column;
+
+        top:10%;
+    }
+
+    .left-side{
+
+        width:100%;
+
+        border-right:none;
+
+        border-bottom:
+        1px solid rgba(255,255,255,.1);
+
+        padding-bottom:15px;
+    }
+
+    .right-side{
+
+        width:100%;
+    }
+
+    .row{
+
+        flex-direction:column;
+    }
+
+    .row input{
+
+        width:100%;
+    }
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 30px;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+
+    z-index:1000;
+}
+
+/* LOGO */
+
+.logo img{
+    height:45px;
+    object-fit:contain;
+}
+
+/* ICON CONTAINER */
+
+.nav-icons{
+    display:flex;
+    gap:15px;
+    margin-left:30px;
+}
+
+/* BUTTONS */
+
+.nav-icons a{
+    width:50px;
+    height:50px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    transition:.3s ease;
+}
+
+/* ICONS */
+
+.nav-icons img{
+    width:24px;
+    height:24px;
+
+    filter:brightness(0) invert(1);
+
+    transition:.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.nav-icons a:hover{
+    background:white;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.4);
+}
+
+.nav-icons a:hover img{
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(36%)
+        sepia(96%)
+        saturate(1910%)
+        hue-rotate(203deg)
+        brightness(102%)
+        contrast(101%);
+}
+
+/* ACTIVE PAGE */
+
+.nav-icons a.active{
+    background:white;
+}
+
+.nav-icons a.active img{
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(36%)
+        sepia(96%)
+        saturate(1910%)
+        hue-rotate(203deg)
+        brightness(102%)
+        contrast(101%);
+}
