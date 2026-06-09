@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: white;
+
+  /* spacing around main pages */
+  padding: 160px;
+  box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 30px;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* MENU */
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* ================= SEARCH ================= */
+.search-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#search {
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* ================= MOVIE GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+/* ================= MOVIE CARDS ================= */
+.movie {
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.movie img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.movie p {
+  text-align: center;
+  padding: 4px;
+  font-size: 11px;
+}
+
+.movie:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px red;
+}
+
+/* ================= DETAIL PAGE ================= */
+.detail-container {
+  padding: 160px;
+  color: white;
+}
+
+.detail-box {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.detail-box img {
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px red;
+}
+
+.info {
+  max-width: 500px;
+}
+
+.info p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.info button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.info button:hover {
+  background: darkred;
+}
