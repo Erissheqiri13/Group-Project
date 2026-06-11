@@ -10,7 +10,7 @@ $(document).ready(function () {
     function () {
       $(this).css({
         transform: "scale(1.08)",
-        boxShadow: "0 0 15px red"
+        boxShadow: "0 0 15px blue"
       });
     },
     function () {
