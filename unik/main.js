@@ -51,3 +51,19 @@ $(document).ready(function(){
     });
 
 });
+
+let technologies = [
+"HTML",
+"CSS",
+"JavaScript",
+"jQuery",
+"Bootstrap"
+];
+
+technologies.forEach(function(item){
+    console.log(item);
+});
+
+for(let i=0;i<technologies.length;i++){
+    console.log(technologies[i]);
+}
